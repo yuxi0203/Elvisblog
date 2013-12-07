@@ -2,13 +2,9 @@ __author__ = 'xiyu'
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from microblog import settings, app, db, lm, oid
-from form import LoginForm
+from form import LoginForm, EditForm
 from models import User, ROLE_USER, ROLE_ADMIN
-
-
-@app.before_request
-def before_request():
-    g.user = current_user
+from datetime import datetime
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -46,11 +42,47 @@ def after_login(resp):
     login_user(user, remember=remember_me)
     return redirect(request.args.get('next') or url_for('index'))
 
+@app.before_request
+def before_request():
+    g.user = current_user
+    if g.user.is_authenticated():
+        g.user.last_seen = datetime.utcnow()
+        db.session.add(g.user)
+        db.session.commit()
 
-@app.route('/logout')
-def logout():
-    logout_user()
-    return redirect(url_for('index'))
+
+@app.route('/user/<nickname>')
+@login_required
+def user(nickname):
+    user = User.query.filter_by(nickname=nickname).first()
+    if user == None:
+        flash('User' + nickname + ' not found.')
+        return redirect(url_for('index'))
+    posts = [
+        {'author': user, 'body': 'Test post #1'},
+        {'author': user, 'body': 'Test post #2'}
+    ]
+    return render_template('user.html',
+                           user=user,
+                           posts=posts)
+
+
+@app.route('/edit', methods=['GET', 'POST'])
+@login_required
+def edit():
+    form = EditForm(g.user.nickname)
+    if form.validate_on_submit():
+        g.user.nickname = form.nickname.data
+        g.user.about_me = form.about_me.data
+        db.session.add(g.user)
+        db.session.commit()
+        flash('Your changes have been saved.')
+        return redirect(url_for('edit'))
+    else:
+        form.nickname.data = g.user.nickname
+        form.about_me.data = g.user.about_me
+    return render_template('edit.html',
+                           form=form)
 
 
 @app.route('/')
@@ -74,10 +106,22 @@ def index():
         posts = posts)
 
 
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 
-@app.route('/remote')
-def hello():
-    return render_template("remote.html")
+
+@app.errorhandler(404)
+def internal_error(error):
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_error(error):
+    db.session.rollback()
+    return render_template('500.html'), 500
+
 
 @lm.user_loader
 def load_user(id):

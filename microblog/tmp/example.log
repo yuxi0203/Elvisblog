@@ -1,2 +1,218 @@
 2013-12-07 01:29:07,282 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:44]
 2013-12-07 01:30:58,898 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:45]
+2014-01-08 05:33:41,119 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:45]
+2014-01-08 08:55:31,796 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-08 09:26:10,402 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:03:59,197 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:25:04,676 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:28:01,520 ERROR: Exception on /index [GET] [in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask_login.py", line 658, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiyu/Documents/pycharm(project)/microblog/microblog/views.py", line 99, in index
+    posts = g.user.followed_posts().all()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/werkzeug/local.py", line 338, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2014-01-09 05:33:01,528 ERROR: Exception on /index [GET] [in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask_login.py", line 658, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiyu/Documents/pycharm(project)/microblog/microblog/views.py", line 99, in index
+    posts = g.user.followed_posts().all()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/werkzeug/local.py", line 338, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2014-01-09 05:33:03,375 ERROR: Exception on /index [GET] [in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask_login.py", line 658, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiyu/Documents/pycharm(project)/microblog/microblog/views.py", line 99, in index
+    posts = g.user.followed_posts().all()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/werkzeug/local.py", line 338, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2014-01-09 05:33:11,636 ERROR: Exception on /index [GET] [in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask_login.py", line 658, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiyu/Documents/pycharm(project)/microblog/microblog/views.py", line 99, in index
+    posts = g.user.followed_posts().all()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/werkzeug/local.py", line 338, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2014-01-09 05:33:11,827 ERROR: Exception on /index [GET] [in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask_login.py", line 658, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiyu/Documents/pycharm(project)/microblog/microblog/views.py", line 99, in index
+    posts = g.user.followed_posts().all()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/werkzeug/local.py", line 338, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2014-01-09 05:33:12,826 ERROR: Exception on /index [GET] [in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask_login.py", line 658, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiyu/Documents/pycharm(project)/microblog/microblog/views.py", line 99, in index
+    posts = g.user.followed_posts().all()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/werkzeug/local.py", line 338, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2014-01-09 05:33:13,177 ERROR: Exception on /index [GET] [in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask_login.py", line 658, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiyu/Documents/pycharm(project)/microblog/microblog/views.py", line 99, in index
+    posts = g.user.followed_posts().all()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/werkzeug/local.py", line 338, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2014-01-09 05:33:13,411 ERROR: Exception on /index [GET] [in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask_login.py", line 658, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiyu/Documents/pycharm(project)/microblog/microblog/views.py", line 99, in index
+    posts = g.user.followed_posts().all()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/werkzeug/local.py", line 338, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2014-01-09 05:33:17,645 ERROR: Exception on /index [GET] [in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask_login.py", line 658, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiyu/Documents/pycharm(project)/microblog/microblog/views.py", line 99, in index
+    posts = g.user.followed_posts().all()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/werkzeug/local.py", line 338, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2014-01-09 05:37:00,410 ERROR: Exception on /index [GET] [in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/flask_login.py", line 658, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiyu/Documents/pycharm(project)/microblog/microblog/views.py", line 99, in index
+    posts = g.user.followed_posts().all()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/werkzeug/local.py", line 338, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2014-01-09 05:37:36,230 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:37:36,580 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:38:46,564 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:38:51,985 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:39:09,392 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:39:09,725 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:39:57,507 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:40:00,416 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:40:00,756 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:43:45,092 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 05:50:34,969 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 06:03:05,175 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 06:03:05,621 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 06:05:08,261 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 06:05:08,599 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 06:19:28,252 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 06:21:50,944 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 06:24:10,507 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 06:26:12,971 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 06:28:49,626 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
+2014-01-09 06:28:50,015 INFO: microblog  startup [in /Users/xiyu/Documents/pycharm(project)/microblog/microblog/__init__.py:46]
